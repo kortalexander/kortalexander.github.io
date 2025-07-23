@@ -1,0 +1,16 @@
+---
+title: "Kort Alexander"
+image: "profile_pic.JPG"
+site: distill::distill_website
+links:
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/kort-alexander-750364228/"
+  - label: Email
+    url: "mailto:kort.alexander1@gmail.com"
+output:
+  postcards::trestles
+---
+
+I’m a marine conservationist with a master’s degree in Environmental Science and Management from the Bren School at UC Santa Barbara, where I specialized in Coastal Marine Resources Management. I most recently worked as Coral Data Manager for The Reef Institute, where I was responsible for overseeing all of the organization's data and grant reporting.
+
+I'm passionate about protecting and restoring marine ecosystems worldwide for the benefit of the communities that rely on them. I have extensive experience in scientific data management and analysis (including spatial data), science communication (writing, social media, and film), education, and marine research techniques.

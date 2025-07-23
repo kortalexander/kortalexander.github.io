@@ -1,0 +1,17 @@
+name: "."
+title: "Kort Alexander"
+theme: postcards.css
+description: |
+  Kort Alexander
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About me"
+      href: about.html
+    - text: "Data science projects"
+      href: blog.html
+    - text: "Resume"
+      href: Resume_7-10-25.pdf  
+output: distill::distill_article
