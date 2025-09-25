@@ -1,0 +1,120 @@
+---
+title: "Juvenile coral feeding study"
+description: |
+  Effect of different amino bath feeding frequency on growth of juvenile coral colonies
+date: "2025-04-14"
+output: 
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    self_contained: false
+    code_folding: Show code
+---
+
+# Overview
+
+This code analyzes measurement data of juvenile *Orbicella faveolata* and *Pseudodiploria clivosa* colonies in an ex-situ nursery and investigates the effect of amino bath feeding frequency on coral growth.
+
+Research conducted at The Reef Institute in West Palm Beach, FL. Thanks to Jasmine Rios for data collection.
+
+# Setup
+
+First, we will set document-wide options and imports all necessary packages.
+
+```{r setup, results = FALSE, message = FALSE, warning = FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+
+# import packages
+library(tidyverse)
+library(janitor)
+library(here)
+library(readxl)
+library(lme4)
+library(lmerTest)
+library(emmeans)
+library(lubridate)
+library(modelsummary)
+```
+
+# Data input
+
+Next, we will import the raw growth measurements data.
+
+```{r}
+measurements <- read_xlsx(here("data", "Feeding study measurements.xlsx"))
+```
+
+# Data wrangling
+
+Then we can format the data to be more useful for analysis.
+
+```{r}
+# format date column and add columns for treatment group and species
+measurements_clean <- measurements %>% 
+  filter(!is.na(`Area (mm^2)`)) %>% 
+  mutate(`Date of picture` = date(`Date of picture`)) %>% 
+  mutate(treatment_group = substr(`Combined group name`, 1, 1)) %>% 
+  mutate(species = case_when(endsWith(`Combined group name`, "O") ~ "OFAV",
+                             endsWith(`Combined group name`, "P") ~ "PCLI")) %>% 
+  mutate(combined_individual_name = paste0(`Combined group name`, "-", Individual)) %>% 
+  mutate(days_elapsed = as.numeric(`Date of picture` - date("2025-03-04")))
+
+# cast treatment group as a factor, set group 3 (control) as reference
+measurements_clean$treatment_group <- factor(measurements_clean$treatment_group, levels = c("3", "2", "1"))
+
+# create data frame with only PCLI measurements
+pcli_measurements <- measurements_clean %>% 
+  filter(species == "PCLI")
+
+# create data frame with only OFAV measurements
+ofav_measurements <- measurements_clean %>% 
+  filter(species == "OFAV")
+
+# calculate average sizes for each treatment group, measurement date, and species
+avg_sizes_by_group <- measurements_clean %>% 
+  group_by(`Combined group name`, `Date of picture`, treatment_group, species) %>% 
+  summarize(mean_area = mean(`Area (mm^2)`), se = sd(`Area (mm^2)`) / sqrt(n()))
+```
+
+# Data visualization
+
+This code creates line graphs showing the individual measurements and average measurements for each treatment group over time.
+
+```{r}
+ggplot(measurements_clean, aes(x = `Date of picture`, y = `Area (mm^2)`, color = combined_individual_name)) +
+  geom_line() +
+  facet_wrap(~ species, scales = "free") +
+  scale_y_continuous(limits = c(0, NA)) +
+  theme(legend.position = "none")
+```
+
+Figure 1. Growth of juvenile *Orbicella faveolata* (OFAV) and *Pseudodiploria clivosa* (PCLI) coral colonies over the duration of the study.
+
+```{r}
+ggplot(avg_sizes_by_group, aes(x = `Date of picture`, y = mean_area, color = treatment_group, fill = treatment_group)) +
+  geom_line(size = 0.8) +
+  geom_ribbon(aes(ymin = mean_area - se, ymax = mean_area + se), alpha = 0.2, color = NA) +
+  facet_wrap(~ species, scales = "free") +
+  scale_y_continuous(limits = c(0, NA)) +
+  labs(y = "Mean area (mm^2)", color = "Treatment group") +
+  guides(fill = "none")
+```
+
+Figure 2. Effects of amino bath feeding on the growth of juvenile *Orbicella faveolata* (OFAV) and *Pseudodiploria clivosa* (PCLI) coral colonies, divided by treatment group, over the duration of the study. Group 1 was fed weekly, group 2 was fed every two weeks, and group 3 was not fed at all. Lines represent the mean size of corals, while shaded regions represent the mean ± standard error. Feeding had little to no effect on OFAV colonies, while more frequent feeding resulted in faster growth for PCLI colonies.
+
+# Linear mixed-effects models
+
+Finally, this code creates linear mixed-effects models to investigate the effect of feeding frequency on coral growth quantitatively.
+
+Table 1. Summary of linear mixed-effects models of the effect of feeding frequency on growth of juvenile *Orbicella faveolata* (OFAV) and *Pseudodiploria clivosa* (PCLI) coral colonies. Initial colony sizes were treated as random effects, while the number of days elapsed and treatment group were treated as fixed effects. Feeding frequency had no significant effect on the growth rate of OFAV colonies (*p* > 0.1), while it had a positive effect on the growth rate of PCLI colonies, falling just below the threshold of significance (0.05 < *p* < 0.1).
+
+```{r}
+pcli_model <- lmer(`Area (mm^2)` ~ days_elapsed * treatment_group + (1 | combined_individual_name), data = pcli_measurements)
+
+ofav_model <- lmer(`Area (mm^2)` ~ days_elapsed * treatment_group + (1 | combined_individual_name), data = ofav_measurements)
+
+modelsummary(list("OFAV" = ofav_model, "PCLI" = pcli_model),
+             output = "html",
+             stars = TRUE)
+```
