@@ -1,0 +1,85 @@
+---
+title: "Effect of different feeding schedules on juvenile corals of Orbicella faveolata and Pseudodiploria clivosa"
+description: |
+  A short description of the post.
+author: []
+date: 2025-09-25
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+# Setup
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# import packages
+library(tidyverse)
+library(janitor)
+library(here)
+library(readxl)
+library(lme4)
+library(lmerTest)
+library(emmeans)
+library(lubridate)
+```
+
+# Data input
+
+```{r}
+measurements <- read_xlsx(here("data", "Feeding study measurements.xlsx"))
+```
+
+# Data wrangling
+```{r}
+# format date column and add columns for treatment group and species
+measurements_clean <- measurements %>% 
+  filter(!is.na(`Area (mm^2)`)) %>% 
+  mutate(`Date of picture` = date(`Date of picture`)) %>% 
+  mutate(treatment_group = substr(`Combined group name`, 1, 1)) %>% 
+  mutate(species = case_when(endsWith(`Combined group name`, "O") ~ "OFAV",
+                             endsWith(`Combined group name`, "P") ~ "PCLI")) %>% 
+  mutate(combined_individual_name = paste0(`Combined group name`, "-", Individual)) %>% 
+  mutate(days_elapsed = as.numeric(`Date of picture` - date("2025-03-04")))
+
+# cast treatment group as a factor, set group 3 (control) as reference
+measurements_clean$treatment_group <- factor(measurements_clean$treatment_group, levels = c("3", "2", "1"))
+
+pcli_measurements <- measurements_clean %>% 
+  filter(species == "PCLI")
+
+ofav_measurements <- measurements_clean %>% 
+  filter(species == "OFAV")
+
+avg_sizes_by_group <- measurements_clean %>% 
+  group_by(`Combined group name`, `Date of picture`, treatment_group, species) %>% 
+  summarize(mean_area = mean(`Area (mm^2)`), se = sd(`Area (mm^2)`) / sqrt(n()))
+
+pcli_avgs <- avg_sizes_by_group %>% 
+  filter(species == "PCLI")
+
+ggplot(measurements_clean, aes(x = `Date of picture`, y = `Area (mm^2)`, color = combined_individual_name)) +
+  geom_line() +
+  facet_wrap(~ species, scales = "free") +
+  scale_y_continuous(limits = c(0, NA)) +
+  theme(legend.position = "none")
+
+ggplot(avg_sizes_by_group, aes(x = `Date of picture`, y = mean_area, color = treatment_group, fill = treatment_group)) +
+  geom_line(size = 0.8) +
+  geom_ribbon(aes(ymin = mean_area - se, ymax = mean_area + se), alpha = 0.2, color = NA) +
+  facet_wrap(~ species, scales = "free") +
+  scale_y_continuous(limits = c(0, NA)) +
+  labs(y = "Mean area (mm^2)", color = "Treatment group") +
+  guides(fill = "none")
+```
+
+```{r}
+pcli_model <- lmer(`Area (mm^2)` ~ days_elapsed * treatment_group + (1 | combined_individual_name), data = pcli_measurements)
+summary(pcli_model)
+
+ofav_model <- lmer(`Area (mm^2)` ~ days_elapsed * treatment_group + (1 | combined_individual_name), data = ofav_measurements)
+summary(ofav_model)
+```
+
+

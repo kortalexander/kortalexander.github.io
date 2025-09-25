@@ -13,5 +13,5 @@ navbar:
     - text: "Data science projects"
       href: blog.html
     - text: "Resume"
-      href: Resume_7-10-25.pdf  
+      href: Resume_9-22-25.pdf  
 output: distill::distill_article
