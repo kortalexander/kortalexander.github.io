@@ -113,12 +113,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Coral bleaching resilience analysis"]},{"type":"character","attributes":{},"value":["Acropora fragments on in-situ nursery structures in South Caicos\n"]},{"type":"character","attributes":{},"value":["2024-04-01"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth","toc_float","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Coral bleaching resilience analysis"]},{"type":"character","attributes":{},"value":["Acropora fragments on in-situ nursery structures in South Caicos\n"]},{"type":"character","attributes":{},"value":["2024-04-01"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth","toc_float","self_contained","code_folding"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]},{"type":"character","attributes":{},"value":["Show code"]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["coral-bleaching-resilience-analysis_files/anchor-4.2.2/anchor.min.js","coral-bleaching-resilience-analysis_files/bowser-1.9.3/bowser.min.js","coral-bleaching-resilience-analysis_files/distill-2.2.21/template.v2.js","coral-bleaching-resilience-analysis_files/figure-html5/unnamed-chunk-17-1.png","coral-bleaching-resilience-analysis_files/figure-html5/unnamed-chunk-2-1.png","coral-bleaching-resilience-analysis_files/figure-html5/unnamed-chunk-3-1.png","coral-bleaching-resilience-analysis_files/figure-html5/unnamed-chunk-4-1.png","coral-bleaching-resilience-analysis_files/header-attrs-2.29/header-attrs.js","coral-bleaching-resilience-analysis_files/jquery-3.6.0/jquery-3.6.0.js","coral-bleaching-resilience-analysis_files/jquery-3.6.0/jquery-3.6.0.min.js","coral-bleaching-resilience-analysis_files/jquery-3.6.0/jquery-3.6.0.min.map","coral-bleaching-resilience-analysis_files/popper-2.6.0/popper.min.js","coral-bleaching-resilience-analysis_files/tippy-6.2.7/tippy-bundle.umd.min.js","coral-bleaching-resilience-analysis_files/tippy-6.2.7/tippy-light-border.css","coral-bleaching-resilience-analysis_files/tippy-6.2.7/tippy.css","coral-bleaching-resilience-analysis_files/tippy-6.2.7/tippy.umd.min.js","coral-bleaching-resilience-analysis_files/webcomponents-2.0.0/webcomponents.js","slate.css"]}
+  {"type":"character","attributes":{},"value":["coral-bleaching-resilience-analysis_files/anchor-4.2.2/anchor.min.js","coral-bleaching-resilience-analysis_files/bowser-1.9.3/bowser.min.js","coral-bleaching-resilience-analysis_files/distill-2.2.21/template.v2.js","coral-bleaching-resilience-analysis_files/figure-html5/unnamed-chunk-17-1.png","coral-bleaching-resilience-analysis_files/figure-html5/unnamed-chunk-18-1.png","coral-bleaching-resilience-analysis_files/figure-html5/unnamed-chunk-2-1.png","coral-bleaching-resilience-analysis_files/figure-html5/unnamed-chunk-3-1.png","coral-bleaching-resilience-analysis_files/figure-html5/unnamed-chunk-4-1.png","coral-bleaching-resilience-analysis_files/header-attrs-2.29/header-attrs.js","coral-bleaching-resilience-analysis_files/jquery-3.6.0/jquery-3.6.0.js","coral-bleaching-resilience-analysis_files/jquery-3.6.0/jquery-3.6.0.min.js","coral-bleaching-resilience-analysis_files/jquery-3.6.0/jquery-3.6.0.min.map","coral-bleaching-resilience-analysis_files/popper-2.6.0/popper.min.js","coral-bleaching-resilience-analysis_files/tippy-6.2.7/tippy-bundle.umd.min.js","coral-bleaching-resilience-analysis_files/tippy-6.2.7/tippy-light-border.css","coral-bleaching-resilience-analysis_files/tippy-6.2.7/tippy.css","coral-bleaching-resilience-analysis_files/tippy-6.2.7/tippy.umd.min.js","coral-bleaching-resilience-analysis_files/webcomponents-2.0.0/webcomponents.js","darkly.css","slate.css"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1565,6 +1565,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><a href="#testing-rate-differences-by-structure" id="toc-testing-rate-differences-by-structure">Testing rate differences by structure</a></li>
 <li><a href="#health-count-tables" id="toc-health-count-tables">Health count tables</a></li>
 <li><a href="#binary-logistic-regression-models-of-survival" id="toc-binary-logistic-regression-models-of-survival">Binary logistic regression models of survival</a></li>
+<li><a href="#calculate-model-prediction-accuracy-and-create-table-summarizing-model-results" id="toc-calculate-model-prediction-accuracy-and-create-table-summarizing-model-results">Calculate model prediction accuracy and create table summarizing model results</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#results-and-discussion" id="toc-results-and-discussion">Results and Discussion</a></li>
@@ -1576,7 +1577,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>Full paper citation: Debuysser, J., Alexander, K., Hertler, H. (In press). Mortality and recovery rates of Acropora fragments on in-situ nurseries after the 2023 bleaching event in the Turks and Caicos Islands.</p>
 <h1 id="methods">Methods</h1>
 <h2 id="setup">Setup</h2>
+<p>This code sets document-wide options and imports all necessary packages.</p>
 <div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'>knitr</span><span class='fu'>::</span><span class='va'><a href='https://rdrr.io/pkg/knitr/man/opts_chunk.html'>opts_chunk</a></span><span class='op'>$</span><span class='fu'>set</span><span class='op'>(</span>echo <span class='op'>=</span> <span class='cn'>TRUE</span>, message <span class='op'>=</span> <span class='cn'>FALSE</span>, warning <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></span>
 <span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
@@ -1593,9 +1599,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'>grid</span><span class='op'>)</span></span>
 <span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'>gridExtra</span><span class='op'>)</span></span></code></pre>
 </div>
+</details>
 </div>
 <h2 id="data-input-and-wrangling">Data input and wrangling</h2>
+<p>This code imports the raw data, and formats it to be more useful for analysis.</p>
 <div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># input data</span></span>
 <span><span class='va'>all_frags</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readxl.tidyverse.org/reference/read_excel.html'>read_excel</a></span><span class='op'>(</span><span class='fu'><a href='https://here.r-lib.org/reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"data"</span>, <span class='st'>"CoralNurseryLog_4-1-24.xlsx"</span><span class='op'>)</span>, sheet <span class='op'>=</span> <span class='st'>"Main Log"</span>, col_types <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"text"</span>, <span class='st'>"text"</span>, <span class='st'>"text"</span>, <span class='st'>"text"</span>, <span class='st'>"text"</span>, <span class='st'>"text"</span>, <span class='st'>"text"</span>, <span class='st'>"text"</span>, <span class='st'>"text"</span>, <span class='st'>"text"</span>, <span class='st'>"date"</span>, <span class='st'>"numeric"</span>, <span class='st'>"date"</span>, <span class='st'>"numeric"</span>, <span class='st'>"numeric"</span>, <span class='st'>"text"</span>, <span class='st'>"date"</span>, <span class='st'>"numeric"</span>, <span class='st'>"text"</span>, <span class='st'>"numeric"</span>, <span class='st'>"text"</span>, <span class='st'>"date"</span>, <span class='st'>"numeric"</span>, <span class='st'>"text"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
@@ -1679,9 +1691,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span><span class='va'>all_frags</span><span class='op'>$</span><span class='va'>t2_simplified_health</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>all_frags</span><span class='op'>$</span><span class='va'>t2_simplified_health</span><span class='op'>)</span></span>
 <span><span class='va'>all_frags_wo_lost</span><span class='op'>$</span><span class='va'>t2_simplified_health</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>all_frags_wo_lost</span><span class='op'>$</span><span class='va'>t2_simplified_health</span><span class='op'>)</span></span></code></pre>
 </div>
+</details>
 </div>
 <h2 id="initial-data-exploration-and-visualization">Initial data exploration and visualization</h2>
+<p>Now we can make some summary tables of the data and create graphs to visualize coral fragment health by site, nursery structure type, and species.</p>
 <div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># make summary tables</span></span>
 <span><span class='va'>overall_summary</span> <span class='op'>&lt;-</span> <span class='va'>all_frags</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
@@ -1705,20 +1723,30 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Site"</span>, y <span class='op'>=</span> <span class='st'>"Number of fragments"</span>, fill <span class='op'>=</span> <span class='st'>"Status"</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_colour_discrete.html'>scale_fill_discrete</a></span><span class='op'>(</span>type <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"#969696"</span>, <span class='st'>"#ffffff"</span>, <span class='st'>"#fdbe85"</span>, <span class='st'>"#fd8d3c"</span>, <span class='st'>"#d94701"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
 </div>
+</details>
 <p><img src="coral-bleaching-resilience-analysis_files/figure-html5/unnamed-chunk-2-1.png" width="624" /></p>
 </div>
 <p>Figure 1. Fragment status at T2 by site. The Chain had the most live fragments at T2 of any site.</p>
 <div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>summary_by_structure</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>structure_type</span>, y <span class='op'>=</span> <span class='va'>total_frags</span>, fill <span class='op'>=</span> <span class='va'>t2_health_condition</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_col</a></span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>"black"</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Structure type"</span>, y <span class='op'>=</span> <span class='st'>"Number of fragments"</span>, fill <span class='op'>=</span> <span class='st'>"Status"</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_colour_discrete.html'>scale_fill_discrete</a></span><span class='op'>(</span>type <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"#969696"</span>, <span class='st'>"#ffffff"</span>, <span class='st'>"#fdbe85"</span>, <span class='st'>"#fd8d3c"</span>, <span class='st'>"#d94701"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
 </div>
+</details>
 <p><img src="coral-bleaching-resilience-analysis_files/figure-html5/unnamed-chunk-3-1.png" width="624" /></p>
 </div>
 <p>Figure 2. Fragment status at T2 by nursery structure type. Status did not differ significantly by structure type.</p>
 <div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>t1_summary_site</span> <span class='op'>&lt;-</span> <span class='va'>all_frags</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>t1_health_condition</span><span class='op'>)</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
@@ -1800,12 +1828,18 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span></span>
 <span><span class='va'>figure</span></span></code></pre>
 </div>
+</details>
 <p><img src="coral-bleaching-resilience-analysis_files/figure-html5/unnamed-chunk-4-1.png" width="624" /></p>
 </div>
 <p>Figure 3. Health status of coral fragments by site, species, and structure. A. Health status of fragments during the first monitoring period in fall 2023 (T1). B. Health status of fragments during the second monitoring period in spring 2024 (T2).</p>
 <h2 id="data-analysis-and-statistical-tests">Data analysis and statistical tests</h2>
+<p>This code creates useful tables and runs Fisher’s exact tests to test for significant differences in the the frequency of each health status by site, structure type, and species. Then initial mortality, overall mortality, recovery, and bleached+dead rates are calculated for the same variables, and Fisher’s exact tests to test for significant differences in those rates. Finally, a binary logistic regression model is created to investigate the effects of each variable on the probability of mortality.</p>
 <h3 id="creating-health-status-tables">Creating health status tables</h3>
 <div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># make overall count table (wo lost)</span></span>
 <span><span class='va'>health_counts</span> <span class='op'>&lt;-</span> <span class='va'>all_frags_wo_lost</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
@@ -1879,9 +1913,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span>  <span class='fu'><a href='https://sfirke.github.io/janitor/reference/adorn_pct_formatting.html'>adorn_pct_formatting</a></span><span class='op'>(</span>digits <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
 <span>  <span class='fu'><a href='https://sfirke.github.io/janitor/reference/adorn_ns.html'>adorn_ns</a></span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
 </div>
+</details>
 </div>
 <h3 id="testing-t2-health-status-by-site-and-structure">Testing T2 health status by site and structure</h3>
 <div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># convert count table to contingency table (by site)</span></span>
 <span><span class='va'>health_ct</span> <span class='op'>&lt;-</span> <span class='va'>health_counts_wo_lost</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
@@ -1934,9 +1973,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span><span class='va'>simplified_health_fisher_test_str</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://sfirke.github.io/janitor/reference/fisher.test.html'>fisher.test</a></span><span class='op'>(</span><span class='va'>simplified_health_ct_str</span><span class='op'>)</span></span>
 <span><span class='va'>simplified_health_fisher_test_str</span></span></code></pre>
 </div>
+</details>
 </div>
 <h3 id="testing-t2-health-status-by-t1-health-status">Testing T2 health status by T1 health status</h3>
 <div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># filter out fragments that were not photographed in t1</span></span>
 <span><span class='va'>all_frags_wo_t1_na</span> <span class='op'>&lt;-</span> <span class='va'>all_frags</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
@@ -1998,9 +2042,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span><span class='va'>t1_b_d_fisher_test</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://sfirke.github.io/janitor/reference/fisher.test.html'>fisher.test</a></span><span class='op'>(</span><span class='va'>t2_by_t1_health_ct</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>3</span>,<span class='fl'>4</span><span class='op'>)</span>, <span class='op'>]</span><span class='op'>)</span></span>
 <span><span class='va'>t1_b_d_fisher_test</span></span></code></pre>
 </div>
+</details>
 </div>
 <h3 id="tables-for-health-by-site">Tables for health by site</h3>
 <div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>t1_health_by_site_counts</span> <span class='op'>&lt;-</span> <span class='va'>all_frags_wo_t1_na_wo_lost</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
 <span>  <span class='fu'><a href='https://sfirke.github.io/janitor/reference/tabyl.html'>tabyl</a></span><span class='op'>(</span><span class='va'>site_location</span>, <span class='va'>t1_health_condition</span><span class='op'>)</span></span>
@@ -2009,9 +2058,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span>  <span class='fu'><a href='https://sfirke.github.io/janitor/reference/adorn_pct_formatting.html'>adorn_pct_formatting</a></span><span class='op'>(</span>digits <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
 <span>  <span class='fu'><a href='https://sfirke.github.io/janitor/reference/adorn_ns.html'>adorn_ns</a></span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
 </div>
+</details>
 </div>
 <h3 id="overall-mortality-bleaching-and-recovery-rates">Overall mortality, bleaching, and recovery rates</h3>
 <div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># count up totals and frags in each category</span></span>
 <span><span class='va'>t1_total</span> <span class='op'>&lt;-</span> <span class='va'>all_frags</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
@@ -2084,9 +2138,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>t2_health_condition</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span>total_frags <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/context.html'>n</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
 </div>
+</details>
 </div>
 <h3 id="mortality-bleaching-and-recovery-rates-by-site">Mortality, bleaching, and recovery rates by site</h3>
 <div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># count up totals and frags in each category by site</span></span>
 <span><span class='va'>t1_total_by_site</span> <span class='op'>&lt;-</span> <span class='va'>all_frags</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
@@ -2168,9 +2227,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span>  <span class='fu'><a href='https://sfirke.github.io/janitor/reference/tabyl.html'>tabyl</a></span><span class='op'>(</span><span class='va'>site_location</span>, <span class='va'>t2_health_condition</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='op'>-</span><span class='va'>lost</span><span class='op'>)</span></span></code></pre>
 </div>
+</details>
 </div>
 <h3 id="testing-rate-differences-by-site">Testing rate differences by site</h3>
 <div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># create contingency tables for fisher's tests</span></span>
 <span><span class='va'>init_mortality_ct_site</span> <span class='op'>&lt;-</span> <span class='va'>rates_by_site</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
@@ -2283,9 +2347,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span><span class='va'>dc_p_bleach_dead_fishers</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://sfirke.github.io/janitor/reference/fisher.test.html'>fisher.test</a></span><span class='op'>(</span><span class='va'>t1_bleached_or_dead_v_healthy_ct_site</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>3</span>,<span class='fl'>4</span><span class='op'>)</span>,<span class='op'>]</span><span class='op'>)</span></span>
 <span><span class='va'>dc_p_bleach_dead_fishers</span></span></code></pre>
 </div>
+</details>
 </div>
 <h3 id="mortality-bleaching-and-recovery-rates-by-species">Mortality, bleaching, and recovery rates by species</h3>
 <div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>t1_total_by_species</span> <span class='op'>&lt;-</span> <span class='va'>all_frags</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>t1_health_condition</span> <span class='op'>!=</span> <span class='st'>"lost"</span> <span class='op'>&amp;</span> <span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>t1_health_condition</span><span class='op'>)</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
@@ -2366,9 +2435,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span>  <span class='fu'><a href='https://sfirke.github.io/janitor/reference/tabyl.html'>tabyl</a></span><span class='op'>(</span><span class='va'>acronym</span>, <span class='va'>t2_health_condition</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='op'>-</span><span class='va'>lost</span><span class='op'>)</span></span></code></pre>
 </div>
+</details>
 </div>
 <h3 id="testing-rate-differences-by-species">Testing rate differences by species</h3>
 <div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># create contingency tables for fisher's tests</span></span>
 <span><span class='va'>init_mortality_ct_species</span> <span class='op'>&lt;-</span> <span class='va'>rates_by_species</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
@@ -2406,9 +2480,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span><span class='va'>species_t1_bleached_or_dead_v_healthy_fishers</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://sfirke.github.io/janitor/reference/fisher.test.html'>fisher.test</a></span><span class='op'>(</span><span class='va'>t1_bleached_or_dead_v_healthy_ct_species</span><span class='op'>)</span></span>
 <span><span class='va'>species_t1_bleached_or_dead_v_healthy_fishers</span></span></code></pre>
 </div>
+</details>
 </div>
 <h3 id="mortality-bleaching-and-recovery-rates-by-nursery-structure-type">Mortality, bleaching, and recovery rates by nursery structure type</h3>
 <div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>t1_total_by_str</span> <span class='op'>&lt;-</span> <span class='va'>all_frags</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>t1_health_condition</span> <span class='op'>!=</span> <span class='st'>"lost"</span> <span class='op'>&amp;</span> <span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>t1_health_condition</span><span class='op'>)</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
@@ -2490,9 +2569,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span>  <span class='fu'><a href='https://sfirke.github.io/janitor/reference/tabyl.html'>tabyl</a></span><span class='op'>(</span><span class='va'>structure_type</span>, <span class='va'>t2_health_condition</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='op'>-</span><span class='va'>lost</span><span class='op'>)</span></span></code></pre>
 </div>
+</details>
 </div>
 <h3 id="testing-rate-differences-by-structure">Testing rate differences by structure</h3>
 <div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># create contingency tables for fisher's tests</span></span>
 <span><span class='va'>init_mortality_ct_str</span> <span class='op'>&lt;-</span> <span class='va'>rates_by_str</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
@@ -2594,9 +2678,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span><span class='va'>rsq_cb_bleach_dead_fishers</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://sfirke.github.io/janitor/reference/fisher.test.html'>fisher.test</a></span><span class='op'>(</span><span class='va'>t1_bleached_or_dead_v_healthy_ct_str</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>4</span>,<span class='fl'>5</span><span class='op'>)</span>,<span class='op'>]</span><span class='op'>)</span></span>
 <span><span class='va'>rsq_cb_bleach_dead_fishers</span></span></code></pre>
 </div>
+</details>
 </div>
 <h3 id="health-count-tables">Health count tables</h3>
 <div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>t1_health_counts_total</span> <span class='op'>&lt;-</span> <span class='va'>all_frags</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
 <span>  <span class='fu'><a href='https://sfirke.github.io/janitor/reference/tabyl.html'>tabyl</a></span><span class='op'>(</span><span class='va'>t1_health_condition</span><span class='op'>)</span></span>
@@ -2610,9 +2699,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>site_location</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span>total_frags <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/context.html'>n</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
 </div>
+</details>
 </div>
 <h3 id="binary-logistic-regression-models-of-survival">Binary logistic regression models of survival</h3>
 <div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># change acronym to factor to specify APAL as reference level for species</span></span>
 <span><span class='va'>all_frags_wo_lost</span><span class='op'>$</span><span class='va'>acronym</span> <span class='op'>&lt;-</span> <span class='va'>all_frags_wo_lost</span><span class='op'>$</span><span class='va'>acronym</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> </span>
@@ -2621,47 +2715,19 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span><span class='co'># run binary logistic regression model</span></span>
 <span><span class='va'>f1</span> <span class='op'>&lt;-</span> <span class='va'>t2_simplified_health</span> <span class='op'>~</span> <span class='va'>site_location</span> <span class='op'>+</span> <span class='va'>acronym</span> <span class='op'>+</span> <span class='va'>structure_type</span></span>
 <span><span class='va'>combined_blr</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/glm.html'>glm</a></span><span class='op'>(</span>formula <span class='op'>=</span> <span class='va'>f1</span>, data <span class='op'>=</span> <span class='va'>all_frags_wo_lost</span>, family <span class='op'>=</span> <span class='st'>"binomial"</span><span class='op'>)</span></span>
-<span><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>combined_blr</span><span class='op'>)</span></span></code></pre>
-</div>
-<pre><code>
-Call:
-glm(formula = f1, family = &quot;binomial&quot;, data = all_frags_wo_lost)
-
-Coefficients:
-                              Estimate Std. Error z value Pr(&gt;|z|)
-(Intercept)                    -0.7480     0.4696  -1.593 0.111159
-site_locationEagle Ray Alley    1.7672     0.4650   3.800 0.000144
-site_locationDove Cay           2.0939     0.4910   4.264 2.00e-05
-site_locationPlane              2.7083     0.6075   4.459 8.25e-06
-acronymACER                     1.8638     0.5283   3.528 0.000419
-structure_typePVC Line Square   0.1906     0.5453   0.350 0.726671
-structure_typePVC Tree          0.0716     0.5567   0.129 0.897664
-structure_typeRope Square       0.3607     0.5511   0.654 0.512806
-structure_typeCement Block      1.5546     0.6449   2.411 0.015916
-                                 
-(Intercept)                      
-site_locationEagle Ray Alley  ***
-site_locationDove Cay         ***
-site_locationPlane            ***
-acronymACER                   ***
-structure_typePVC Line Square    
-structure_typePVC Tree           
-structure_typeRope Square        
-structure_typeCement Block    *  
----
-Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-
-(Dispersion parameter for binomial family taken to be 1)
-
-    Null deviance: 256.26  on 263  degrees of freedom
-Residual deviance: 196.40  on 255  degrees of freedom
-AIC: 214.4
-
-Number of Fisher Scoring iterations: 6</code></pre>
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>reference_mort_prob</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>combined_blr</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>)</span> <span class='op'>/</span> <span class='op'>(</span><span class='fl'>1</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>combined_blr</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>combined_blr</span><span class='op'>)</span></span>
 <span></span>
-<span><span class='co'># effect plots</span></span>
+<span><span class='va'>reference_mort_prob</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>combined_blr</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>)</span> <span class='op'>/</span> <span class='op'>(</span><span class='fl'>1</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>combined_blr</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+</div>
+</details>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># effect plots</span></span>
 <span><span class='va'>site_ep</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://jtools.jacob-long.com/reference/effect_plot.html'>effect_plot</a></span><span class='op'>(</span><span class='va'>combined_blr</span>, pred <span class='op'>=</span> <span class='va'>site_location</span>, interval <span class='op'>=</span> <span class='cn'>TRUE</span>, x.label <span class='op'>=</span> <span class='st'>"Site"</span>, y.label <span class='op'>=</span> <span class='st'>"Probability of mortality"</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_continuous.html'>scale_y_continuous</a></span><span class='op'>(</span>limits <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>1</span><span class='op'>)</span>, breaks <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>0.25</span>, <span class='fl'>0.5</span>, <span class='fl'>0.75</span>, <span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span>axis.text.x <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>angle <span class='op'>=</span> <span class='fl'>45</span>, hjust <span class='op'>=</span> <span class='fl'>1</span>, vjust <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span></span>
@@ -2678,10 +2744,16 @@ Number of Fisher Scoring iterations: 6</code></pre>
 <span></span>
 <span><span class='va'>blr_figure</span></span></code></pre>
 </div>
-<p><img src="coral-bleaching-resilience-analysis_files/figure-html5/unnamed-chunk-17-1.png" width="624" /></p>
+</details>
+<p><img src="coral-bleaching-resilience-analysis_files/figure-html5/unnamed-chunk-18-1.png" width="624" /></p>
 </div>
 <p>Figure 4. Effect of site, species, and structure type on coral fragment survival. Probability of mortality predicted by combined binary logistic regression model is plotted on the y-axis, while predictor variables are plotted on the x-axis.</p>
+<h3 id="calculate-model-prediction-accuracy-and-create-table-summarizing-model-results">Calculate model prediction accuracy and create table summarizing model results</h3>
 <div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># predict survival using last two models and calculate accuracy</span></span>
 <span><span class='va'>preds</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>combined_blr</span>, newdata <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='va'>all_frags_wo_lost</span>, <span class='op'>-</span><span class='va'>t2_simplified_health</span><span class='op'>)</span>, type <span class='op'>=</span> <span class='st'>"response"</span><span class='op'>)</span></span>
@@ -2693,37 +2765,48 @@ Number of Fisher Scoring iterations: 6</code></pre>
 <span><span class='va'>pred_tab</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span><span class='op'>(</span><span class='va'>frags_w_pred</span><span class='op'>$</span><span class='va'>t2_simplified_health</span>, <span class='va'>frags_w_pred</span><span class='op'>$</span><span class='va'>pred_outcome</span>, dnn <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"observed"</span>, <span class='st'>"predicted"</span><span class='op'>)</span><span class='op'>)</span></span>
 <span><span class='va'>pred_tab</span></span></code></pre>
 </div>
+</details>
 <pre><code>        predicted
 observed alive dead
    alive    25   25
    dead      9  205</code></pre>
+<details>
+<summary>
+Show code
+</summary>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>accuracy</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='va'>pred_tab</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>/</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>pred_tab</span><span class='op'>)</span></span>
 <span><span class='va'>accuracy</span></span></code></pre>
 </div>
+</details>
 <pre><code>[1] 0.8712121</code></pre>
+<details>
+<summary>
+Show code
+</summary>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># summarize results in table format</span></span>
 <span><span class='va'>blr_table</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://www.danieldsjoberg.com/gtsummary/reference/tbl_regression.html'>tbl_regression</a></span><span class='op'>(</span><span class='va'>combined_blr</span>, exponentiate <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
 <span><span class='va'>blr_table</span></span></code></pre>
 </div>
-<div id="ufvaagptvc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ufvaagptvc table {
+</details>
+<div id="fwtjkevccn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fwtjkevccn table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ufvaagptvc thead, #ufvaagptvc tbody, #ufvaagptvc tfoot, #ufvaagptvc tr, #ufvaagptvc td, #ufvaagptvc th {
+#fwtjkevccn thead, #fwtjkevccn tbody, #fwtjkevccn tfoot, #fwtjkevccn tr, #fwtjkevccn td, #fwtjkevccn th {
   border-style: none;
 }
 
-#ufvaagptvc p {
+#fwtjkevccn p {
   margin: 0;
   padding: 0;
 }
 
-#ufvaagptvc .gt_table {
+#fwtjkevccn .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2749,12 +2832,12 @@ observed alive dead
   border-left-color: #D3D3D3;
 }
 
-#ufvaagptvc .gt_caption {
+#fwtjkevccn .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ufvaagptvc .gt_title {
+#fwtjkevccn .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2766,7 +2849,7 @@ observed alive dead
   border-bottom-width: 0;
 }
 
-#ufvaagptvc .gt_subtitle {
+#fwtjkevccn .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2778,7 +2861,7 @@ observed alive dead
   border-top-width: 0;
 }
 
-#ufvaagptvc .gt_heading {
+#fwtjkevccn .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2790,13 +2873,13 @@ observed alive dead
   border-right-color: #D3D3D3;
 }
 
-#ufvaagptvc .gt_bottom_border {
+#fwtjkevccn .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ufvaagptvc .gt_col_headings {
+#fwtjkevccn .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2811,7 +2894,7 @@ observed alive dead
   border-right-color: #D3D3D3;
 }
 
-#ufvaagptvc .gt_col_heading {
+#fwtjkevccn .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2831,7 +2914,7 @@ observed alive dead
   overflow-x: hidden;
 }
 
-#ufvaagptvc .gt_column_spanner_outer {
+#fwtjkevccn .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2843,15 +2926,15 @@ observed alive dead
   padding-right: 4px;
 }
 
-#ufvaagptvc .gt_column_spanner_outer:first-child {
+#fwtjkevccn .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ufvaagptvc .gt_column_spanner_outer:last-child {
+#fwtjkevccn .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ufvaagptvc .gt_column_spanner {
+#fwtjkevccn .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2863,11 +2946,11 @@ observed alive dead
   width: 100%;
 }
 
-#ufvaagptvc .gt_spanner_row {
+#fwtjkevccn .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ufvaagptvc .gt_group_heading {
+#fwtjkevccn .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2893,7 +2976,7 @@ observed alive dead
   text-align: left;
 }
 
-#ufvaagptvc .gt_empty_group_heading {
+#fwtjkevccn .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2908,15 +2991,15 @@ observed alive dead
   vertical-align: middle;
 }
 
-#ufvaagptvc .gt_from_md > :first-child {
+#fwtjkevccn .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ufvaagptvc .gt_from_md > :last-child {
+#fwtjkevccn .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ufvaagptvc .gt_row {
+#fwtjkevccn .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2935,7 +3018,7 @@ observed alive dead
   overflow-x: hidden;
 }
 
-#ufvaagptvc .gt_stub {
+#fwtjkevccn .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2948,7 +3031,7 @@ observed alive dead
   padding-right: 5px;
 }
 
-#ufvaagptvc .gt_stub_row_group {
+#fwtjkevccn .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2962,15 +3045,15 @@ observed alive dead
   vertical-align: top;
 }
 
-#ufvaagptvc .gt_row_group_first td {
+#fwtjkevccn .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ufvaagptvc .gt_row_group_first th {
+#fwtjkevccn .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ufvaagptvc .gt_summary_row {
+#fwtjkevccn .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2980,16 +3063,16 @@ observed alive dead
   padding-right: 5px;
 }
 
-#ufvaagptvc .gt_first_summary_row {
+#fwtjkevccn .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ufvaagptvc .gt_first_summary_row.thick {
+#fwtjkevccn .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ufvaagptvc .gt_last_summary_row {
+#fwtjkevccn .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2999,7 +3082,7 @@ observed alive dead
   border-bottom-color: #D3D3D3;
 }
 
-#ufvaagptvc .gt_grand_summary_row {
+#fwtjkevccn .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3009,7 +3092,7 @@ observed alive dead
   padding-right: 5px;
 }
 
-#ufvaagptvc .gt_first_grand_summary_row {
+#fwtjkevccn .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3019,7 +3102,7 @@ observed alive dead
   border-top-color: #D3D3D3;
 }
 
-#ufvaagptvc .gt_last_grand_summary_row_top {
+#fwtjkevccn .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3029,11 +3112,11 @@ observed alive dead
   border-bottom-color: #D3D3D3;
 }
 
-#ufvaagptvc .gt_striped {
+#fwtjkevccn .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ufvaagptvc .gt_table_body {
+#fwtjkevccn .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3042,7 +3125,7 @@ observed alive dead
   border-bottom-color: #D3D3D3;
 }
 
-#ufvaagptvc .gt_footnotes {
+#fwtjkevccn .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3056,7 +3139,7 @@ observed alive dead
   border-right-color: #D3D3D3;
 }
 
-#ufvaagptvc .gt_footnote {
+#fwtjkevccn .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3065,7 +3148,7 @@ observed alive dead
   padding-right: 5px;
 }
 
-#ufvaagptvc .gt_sourcenotes {
+#fwtjkevccn .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3079,7 +3162,7 @@ observed alive dead
   border-right-color: #D3D3D3;
 }
 
-#ufvaagptvc .gt_sourcenote {
+#fwtjkevccn .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3087,72 +3170,72 @@ observed alive dead
   padding-right: 5px;
 }
 
-#ufvaagptvc .gt_left {
+#fwtjkevccn .gt_left {
   text-align: left;
 }
 
-#ufvaagptvc .gt_center {
+#fwtjkevccn .gt_center {
   text-align: center;
 }
 
-#ufvaagptvc .gt_right {
+#fwtjkevccn .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ufvaagptvc .gt_font_normal {
+#fwtjkevccn .gt_font_normal {
   font-weight: normal;
 }
 
-#ufvaagptvc .gt_font_bold {
+#fwtjkevccn .gt_font_bold {
   font-weight: bold;
 }
 
-#ufvaagptvc .gt_font_italic {
+#fwtjkevccn .gt_font_italic {
   font-style: italic;
 }
 
-#ufvaagptvc .gt_super {
+#fwtjkevccn .gt_super {
   font-size: 65%;
 }
 
-#ufvaagptvc .gt_footnote_marks {
+#fwtjkevccn .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ufvaagptvc .gt_asterisk {
+#fwtjkevccn .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ufvaagptvc .gt_indent_1 {
+#fwtjkevccn .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ufvaagptvc .gt_indent_2 {
+#fwtjkevccn .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ufvaagptvc .gt_indent_3 {
+#fwtjkevccn .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ufvaagptvc .gt_indent_4 {
+#fwtjkevccn .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ufvaagptvc .gt_indent_5 {
+#fwtjkevccn .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ufvaagptvc .katex-display {
+#fwtjkevccn .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ufvaagptvc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#fwtjkevccn div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3240,7 +3323,7 @@ observed alive dead
 <p>When comparing species, A. palmata fragments fared better than A. cervicornis, with overall mortality rates of 93.5% and 74.7%, respectively. A. palmata has evolved in the shallower reef crest zone (McNeill et al., 1997), developing both a more robust physical structure and a higher resilience to thermal stress, which is likely why both initial and overall mortality were significantly lower for A. palmata than A. cervicornis (Fisher’s exact tests, p&lt;0.001). Thermal tolerance has its limit in extreme heating, and both species showed similar proportions of bleached or dead fragments at T1 and recovery rates (Fisher’s exact tests, p=1).</p>
 <p>While there was no association between nursery structure type and overall mortality (Fisher’s exact test, p=0.145) or recovery rate (Fisher’s exact test, p=0.253), structure type was found to be significantly associated with initial mortality (Fisher’s exact test, p&lt;0.01) and proportion of bleached or dead fragments at T1 (Fisher’s exact test, p=0.033), with the cement block being the least successful (init. mortality rate=61.0%, prop. bleached or dead at T1=100.0%) and the PVC tree being the most successful (init. mortality rate=31.0%, prop. bleached or dead at T1=86.2%) by both metrics. It is possible the increased circulation effect of the PVC trees swaying over their anchor point during the doldrums of the heating event offered an advantage over the block structures. From personal observation, corals on the blocks had the highest sedimentation of all the structure types.</p>
 <p>A binary logistic regression model based on fragment site, species, and structure supported the above findings and was able to predict fragment survival with an accuracy of 87.1%. A fragment of A. palmata on the rope line structure at the Chain would have the lowest predicted probability of mortality at 32.1%, much lower than the overall observed mortality rate of 81.1%. Site and species were found to be significantly associated with probability of mortality, while structure type was not significant except for the cement block. These results suggest that future restoration efforts around South Caicos should focus on growing elkhorn coral fragments at deeper sites on structures suspended above the seafloor to ensure the most success, lessons which can be applied to other Acropora restoration projects as well.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

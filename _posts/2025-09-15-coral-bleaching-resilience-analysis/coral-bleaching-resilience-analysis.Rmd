@@ -9,6 +9,7 @@ output:
     toc_depth: 3
     toc_float: true
     self_contained: false
+    code_folding: Show code
 ---
 
 # Overview
@@ -20,6 +21,8 @@ Full paper citation: Debuysser, J., Alexander, K., Hertler, H. (In press). Morta
 # Methods
 
 ## Setup
+
+This code sets document-wide options and imports all necessary packages.
 
 ```{r setup, results = FALSE, message = FALSE, warning = FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
@@ -39,6 +42,8 @@ library(gridExtra)
 ```
 
 ## Data input and wrangling
+
+This code imports the raw data, and formats it to be more useful for analysis.
 
 ```{r}
 # input data
@@ -125,6 +130,8 @@ all_frags_wo_lost$t2_simplified_health <- as.factor(all_frags_wo_lost$t2_simplif
 ```
 
 ## Initial data exploration and visualization
+
+Now we can make some summary tables of the data and create graphs to visualize coral fragment health by site, nursery structure type, and species.
 
 ```{r}
 # make summary tables
@@ -246,6 +253,8 @@ figure
 Figure 3. Health status of coral fragments by site, species, and structure. A. Health status of fragments during the first monitoring period in fall 2023 (T1). B. Health status of fragments during the second monitoring period in spring 2024 (T2).
 
 ## Data analysis and statistical tests
+
+This code creates useful tables and runs Fisher's exact tests to test for significant differences in the the frequency of each health status by site, structure type, and species. Then initial mortality, overall mortality, recovery, and bleached+dead rates are calculated for the same variables, and Fisher's exact tests to test for significant differences in those rates. Finally, a binary logistic regression model is created to investigate the effects of each variable on the probability of mortality.
 
 ### Creating health status tables
 
@@ -1058,7 +1067,7 @@ all_frags_t2_lost_summary <- all_frags %>%
 
 ### Binary logistic regression models of survival
 
-```{r}
+```{r, results = FALSE}
 # change acronym to factor to specify APAL as reference level for species
 all_frags_wo_lost$acronym <- all_frags_wo_lost$acronym %>% 
   factor(levels = c("APAL", "ACER"))
@@ -1069,7 +1078,9 @@ combined_blr <- glm(formula = f1, data = all_frags_wo_lost, family = "binomial")
 summary(combined_blr)
 
 reference_mort_prob <- exp(coef(combined_blr)[1]) / (1 + exp(coef(combined_blr)[1]))
+```
 
+```{r}
 # effect plots
 site_ep <- effect_plot(combined_blr, pred = site_location, interval = TRUE, x.label = "Site", y.label = "Probability of mortality") +
   scale_y_continuous(limits = c(0, 1), breaks = c(0, 0.25, 0.5, 0.75, 1)) +
@@ -1089,6 +1100,8 @@ blr_figure
 ```
 
 Figure 4. Effect of site, species, and structure type on coral fragment survival. Probability of mortality predicted by combined binary logistic regression model is plotted on the y-axis, while predictor variables are plotted on the x-axis.
+
+### Calculate model prediction accuracy and create table summarizing model results
 
 ```{r}
 # predict survival using last two models and calculate accuracy
