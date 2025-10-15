@@ -12,6 +12,8 @@ navbar:
       href: about.html
     - text: "Data science projects"
       href: blog.html
+    - text: "Shiny app example"
+      href: https://emlab-ucsb.shinyapps.io/fish_homeranges/
     - text: "Resume"
       href: Resume_9-22-25.pdf  
 output: distill::distill_article
