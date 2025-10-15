@@ -1,7 +1,7 @@
 ---
-title: "Juvenile coral feeding study"
+title: "Linear mixed-effects models"
 description: |
-  Effect of different amino bath feeding frequency on growth of juvenile coral colonies
+  Effect of feeding frequency on juvenile coral growth
 date: "2025-04-14"
 output: 
   distill::distill_article:
